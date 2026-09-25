@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Saver</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="maincontainer">
+        <h1 class="bookmarktitle">Bookmark Saver</h1>
+        <div class="bookmark-form-container">
+            <form id="bookmark_form">
+                <input type="text" name="bookmarkname" id="bookmark_name" placeholder="Bookmark Name..." required>
+                <input type="url" name="bookmarkurl" id="bookmark_url" placeholder="Bookmark Url..." required>
+                <button type="submit" class="submit-btn" id="submitbtn" >Add Bookmark</button>
+            </form>
+        </div>
+
+        <div class="bookmark-container">
+            <ul class="bookmark-list" id="bookmark_list">
+                <!-- Bookmarks to be inserted here -->
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="scripts2.js"></script>
+</body>
+</html>

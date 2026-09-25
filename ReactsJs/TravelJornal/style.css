@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    margin-top: 0;
+    padding-top: 0;
+  
+}
+
+header {
+    background: #ff5858;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 470;
+    font-family: Inter;
+    height: 70px;
+    width: 100%; 
+
+}
+
+header > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    height: 100px;
+    width: 80%;
+    
+}
+
+.post-pic {
+    height: 100%;
+    width: 35%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.text-area {
+    flex: 1;
+    padding: 1.5rem 10px 2rem;
+    
+}
+
+.location-icon {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    margin-right: 8px;
+}
+
+.location {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #646363;
+}
+
+.view-google-map {
+    margin-bottom: 1rem;
+    font-weight: 450;
+    text-decoration: underline;
+    color: black;
+
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 12px;
+    font-weight: 550;
+    margin-bottom: 1rem;
+
+}
+
+    
+

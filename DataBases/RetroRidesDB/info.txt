@@ -1,0 +1,12 @@
+
+---------------------- Retro Rides --------------------
+
+Retro Rides is a car dealership that deals with vintage cars from the 1900s.
+
+Powered by SQL
+The CEO Rodney, manages his stock of vintage cars using an SQL database
+
+Tables
+Tables hold data on the cars in stock, staff who are employed, and the locations of 
+the dealerships.
+

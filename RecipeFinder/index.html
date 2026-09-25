@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe-Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="gen-container">
+        <div class="head">
+            <h1 class="titleheader"><i class="fas fa-utensils"></i> Recipe Finder</h1>
+            <p class="titleheader-info">Find delicious recipes from around the world</p>
+        </div>
+
+        <p class="api-link">
+            Data from <a href="https://www.themealdb.com/api.php">The MealDb :)</a>
+        </p>
+
+        <div class="search-container">
+            <input type="text" class="search-input" id="search-input" placeholder="Search for meals or keywords" >
+            <button class="search_btn" id="search-btn"><i class="fas fa-search"></i> Search</button>
+        </div>
+
+        <div id="error-container" class="hidden">
+            <p class="error-msg">No meals found. Try another search keyword!</p>
+        </div>
+
+        <div class="results-heading" id="results-heading"></div>
+
+        <div class="meals-container" id="meals"></div>
+
+        <div class="meals-details hidden" id="meals-details">
+            <button id="back-btn"><i class="fas fa-arrow-left"></i> Back to recipes</button>
+            
+            <div class="meal-details-content"></div>
+        </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #4b3931;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    height: 80px;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+header > img {
+    width: 50px;
+}
+
+header > h1 {
+    font-weight: 400;
+}
+
+section {
+    padding: 30px 30px 10px;
+}
+
+.add-ingredient-form {
+    display: flex;
+    justify-content: center;
+    gap: 12px ;
+    /* align-items: center; */
+    height: 38px;
+}
+
+.add-ingredient-form > input {
+    border-radius: 6px;
+    border: 1px solid rgb(53, 53, 53);
+    padding: 9px 13px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    min-width: 150px;
+    max-width: 400px;
+}
+
+#add-ingr-btn {
+    font-family: Inter;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    background: #000;
+    width: 150px;
+    font-size: 14px;
+}
+
+#add-ingr-btn:before {
+    content: "+";
+    margin-right: 3px;
+
+}

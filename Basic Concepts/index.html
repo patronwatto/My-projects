@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Concepts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container-1 hidden" id="main-container">
+        <h1>Welcome to Pawa Coffee and snacks</h1>
+        <h2>Select the <span>item</span> you want to buy:</h2>
+        <form id="item-form" action="">
+            <div class="input-element">
+                <label for="coffee">Coffee</label>
+                <input type="radio" value="Coffee" name="item" id="cofee" >
+            </div>
+            <div class="input-element">
+                <label for="sandwiches">Sandwiches</label>
+                <input type="radio" value="Sandwiches" name="item" id="sandwiches">
+            </div>
+            <div class="input-element">
+                <label for="salad">Salad</label>
+                <input type="radio" value="Salad" name="item" id="salad">
+            </div>
+            <div class="input-element">
+                <label for="lemoncake">Lemon Cake</label>
+                <input type="radio" value="Lemon Cake" name="item" id="lemoncake">
+            </div>
+        </form>
+
+        <p id="price"></p>
+
+    </div>
+
+    <div class="main-container-2 hidden">
+       
+        <h3>Name: <span id="name"></span></h3>
+        <h3>Symbol: <span id="symbol"></span></h3>
+        <h3>Price: <span id="price1"></span><span id="price-icon"></span></h3>
+        <h3>Time: <span id="time"></span></h3>
+
+        <div id="label-card"></div>
+    
+    </div>
+
+    <div class="main-container-3 hidden">
+
+        <div id="label-card1"></div>
+    
+    </div>
+
+    <div class="main-container-4 ">
+
+        <div id="img-container"></div>
+        <div id="upload-container"></div> 
+
+    
+    </div>
+
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

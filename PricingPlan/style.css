@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --page-dark: #212121;
+    --primary-color: #3c3d3c;
+    --primary-tint: #4f5250;
+    --primary-hover: #777777;
+    --accent-color: #2dc957;
+    --accent-hover: #91f1a1;
+    --font-color: #fff;
+    --text-gray: #9ca3af;
+}
+
+body {
+    min-height: 199dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--page-dark);
+    color: var(--font-color);
+}
+
+h1 {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    margin: 2rem 4rem 1rem;
+    color: var(--accent-color);
+}
+
+p {
+    color: var(--text-gray);
+}
+
+.pricing-plan-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+.pricing-plan {
+    background: var(--primary-color);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.2s ease;
+    animation: fly-in 2s ease-in;
+}
+
+@keyframes fly-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pricing-plan:hover {
+    border: 2px solid var(--accent-color);
+    transform: scale(1.05);
+}
+
+.pricing-plan i {
+    color: var(--accent-color);
+    height: 80px;
+    width: 80px;
+
+}
+
+.pricing-plan .tag {
+    background: var(--accent-color);
+    color: #000;
+    border-radius: 15px;
+    font-size: 12px;
+    padding: 8px 12px;
+    font-weight: 550;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-plan h2 {
+    font-weight: 700;
+}
+
+.price {
+    position: relative;
+} 
+
+.price span {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: 900;
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    
+}
+
+.price h3 {
+    color: var(--accent-color);
+    font-size: 4rem;
+    padding: 0;
+    margin: 0;
+}
+
+.price p {
+    position: absolute;
+    bottom: 10px;
+    right: -55px;
+}
+
+.pricing-plan p {
+    color: var(--text-gray);
+}
+
+.plan-offers {
+    margin-top: 1.5rem;
+    border-top: 2px solid var(--primary-hover);
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.offer p {
+    color: #deeaff;
+}
+
+button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 8px;
+    text-align: center;
+    color: #000;
+    font-weight: 550;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent-color);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: var(--accent-hover);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+}
+ 
+button:active {
+    transform: scale(0.95);
+}
+
+.comment {
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 55%;
+    background: var(--primary-color);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    animation: fly-out 2s ease-in;
+}
+
+@keyframes fly-out {
+    
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.comment p {
+    color: var(--font-color);
+    font-size: 1.1rem;
+    font-weight: 650;
+    margin: 2rem 0 0.5rem;
+    padding-left: 3rem;
+
+}
+
+.comment h3 {
+    font-weight: 400;
+    color: var(--accent-color);
+    font-size: .9rem;
+}
+
+.comment h2 {
+    font-weight: 450;
+    font-size: 1.1rem;
+}
+
+.profile-info {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+
+.profile-info img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+   
+  
+}
+
+.pic {
+    height: 63px;
+    width: 63px;
+    border-radius: 50%;
+    border: solid var(--accent-color);
+    border-width: 3px 0 3px 0;
+    padding: 3px;
+}
+
+.info {
+    padding-top: 18px;
+}
+
+@media (max-width: 665px) {
+    .pricing-plan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    }
+}

@@ -1,0 +1,158 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5efe6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    padding: 1rem;
+    font-family: sans-serif;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width:100%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 2rem;
+    position:relative;
+    overflow: none;
+}
+
+.screen {
+    text-align: center;
+    padding: 2rem;
+    display: none;
+
+}
+
+.active {
+    display: block;
+}
+
+#start-screen h1 {
+    color: #e86a33;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+
+}
+
+.screen p {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+
+}
+
+.btn {
+    background: #e86a33;
+    padding: 8px 1.2rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+background: #f3895c ;
+transform: scale(1.1);
+transition: 0.4s ease;
+}
+
+.question-text {
+    font-size: 2rem;
+
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+}
+ 
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    gap: .5rem;
+   
+}
+
+.answer-btn {
+    
+    text-indent: 10%;
+    text-align: left;
+    font-size: 1.6rem;
+    background: #ecc0a8;
+    border-style: none;
+    border-radius: 8px;
+    
+}
+
+.answer-btn:hover{
+    cursor: pointer;
+    background: #e8d0c3;
+}
+
+.answer-btn.correct {
+    color: white;
+    background: rgb(2, 140, 2);
+}
+
+.answer-btn.incorrect {
+    color: #ffffff;
+    background: #e83333;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #ecc0a8;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #e86a33;
+    width: 0;
+   transition: width 0.4s ease;
+}
+
+
+#result-screen  h1 {
+    color:#e86a33;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+
+}
+
+#restart-btn {
+    margin-top: 2rem;
+}
+
+.result-info {
+    background: #ecc0a8;
+    padding: 1rem ;
+    border-radius: 1rem;
+
+}
+
+.result-info p {
+    font-size: 1.2rem;
+}
+
+#result-message {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}

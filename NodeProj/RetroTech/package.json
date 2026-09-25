@@ -1,0 +1,12 @@
+{
+    "name": "Retro-Tech",
+    "version": "1.0.0",
+    "description": "A platform to view Engine Charts",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node server1.js"
+    },
+    "author": "Patron Watto",
+    "license": "ISC"
+}

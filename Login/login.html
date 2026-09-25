@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login screen</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- <nav>
+        <a href="">Home</a>
+    </nav> -->
+    
+    <div class="form-container">
+            <form id="login" class="hidden">
+                <span id="activelogin">Login</span><span id="signup-btn">Sign-up</span>
+                <h1 class="Signinheader">Sign-in</h1>
+                <h2 class="sometext">Enter your login credentials</h2>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+                <button class="Btn" type="submit" >Login</button>
+                <div class="small">
+                    <a href="passreset">forgot Password ?</a>
+                    <a href="signup">Sign up </a>
+                </div>
+
+            </form>
+
+            <form id="signup">
+                <span id="login-btn">Login</span><span id="activesignup">Sign-up</span>
+                <h1 class="Signinheader">Sign-Up</h1>
+                <h2 class="sometext">Enter form details</h2>
+                <div class="form-group">
+                    <label for="username">User Name</label>
+                    <input type="text" name="username" id="username">
+                    <small class="sm"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email">
+                    <small class="sm"></small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <small class="sm"></small>
+                </div>
+                <div class="form-group">
+                    <label for="cnfmpassword"> Confirm Password</label>
+                    <input type="password" name="cnfmpassword" id="cnfmpassword">
+                    <small class="sm"></small>
+                </div>
+                <button class="Btn" type="submit" >Register</button>
+                <div class="small">
+                    <a href="googlesignup">Signup with google?</a>
+                    <a href="googlesignup">Signup with facebook?</a>
+                    <a href="login">Sign-in </a>
+                </div>
+
+            </form>
+    </div>
+
+        <script src="login.js"></script>
+</body>
+</html>

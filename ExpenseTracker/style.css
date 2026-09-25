@@ -1,0 +1,490 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(130deg, #0db46e, #accdbd);
+    min-height: 100dvh;
+    width: 100vw;
+}
+
+.expTracDiv {
+    background-color: white;
+    margin:1% 20%;
+    padding: 2rem 1rem;
+    width: 60%;
+    height: 98%;
+    border-radius: 12px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    padding: 1rem;
+}
+
+.sumary {
+    margin:1.5rem .8rem;
+    height: 15rem;
+    border-radius: 1rem;
+    background: linear-gradient(120deg, #247576, #a9f073);
+
+}
+
+h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.income_statement {
+    color: #0db46e;
+    text-align: center;
+    margin: 1.2rem;
+} 
+
+.income_amount {
+    color: #0db46e;
+    font-weight: 700;
+} 
+
+.expense_statement {
+    color: #b40d20;
+    text-align: center;
+    margin: 1.2rem;
+} 
+
+.expense_amount {
+    color: #b40d20;
+     font-weight: 700;
+} 
+
+.balance {
+    text-align: center;
+    font-weight: 600;
+    padding-top: 1rem;
+    color: #373a38;
+}
+
+.income_expense {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.inc_exp {
+    background-color: white;
+    border-radius: 6px;
+    height: 6rem;
+    width: 20rem;
+    margin: .7rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;    
+ 
+}
+
+.inc_exp:hover {
+    transform: translateY(-3px);
+}
+
+.transactions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    height: 25rem;
+}
+
+.alltransactions {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.addtransactionheader {
+    margin-bottom: 1rem;
+} 
+
+#transaction_list {
+    list-style: none;
+    max-height: 360px;
+    overflow-y: auto;
+    padding-right: 8px;
+    flex-grow: 1;
+    
+}
+
+#transaction_list::-webkit-scrollbar {
+    width: 8px;   
+}
+
+#transaction_list::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+#transaction_list::-webkit-scrollbar-thumb {
+    background-color: #cbd5e0;
+    border-radius: 4px;
+}
+
+#transaction_list::-webkit-scrollbar-thumb:hover {
+    border-radius: 4px;
+    background-color: #a0aec0;
+}
+
+.alltransacheader {
+    margin-bottom: 1rem;
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.2rem;
+    height: 4rem;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    border-right: 5px solid ;
+    animation: slideIn 0.3s ease;
+    transition: transform 0.2s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+
+.transaction:hover {
+    transform: translateX(3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.transaction.income {
+    border-right-color: #059669;
+}
+
+.transaction.expense {
+    border-right-color: #dc2626;
+}
+
+.transaction .delete-btn {
+    background: none;
+    border: none;
+    color: #dc2626;
+    cursor: pointer;
+    font-size: 1.4rem;
+    opacity: 0;
+    transition: all 0.2s ease;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-left: 12px;
+}
+
+.transaction:hover .delete-btn {
+    opacity: 1;
+}
+ 
+.transaction .delete-btn:hover {
+    color: #fee2e2;
+    transform: scale(1.1);
+}
+
+.addtransactions {
+    background: linear-gradient(135deg, #f6f8fb, #f1f4f8);
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    border-radius: 16px;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.addtransactions form {
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+   
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    field-sizing: 1rem;
+    transition: all 0.2s ease;
+    background-color: #fff;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+
+
+small {
+    color: #718096;
+    font-size: 0.875rem;
+    margin-top: 4px;
+    display: block;
+}
+
+button {
+    background: linear-gradient(135deg, #2c8b57 0%, #3cb371 100%);
+    color: #fff ;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    margin: 8px 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+    transition: all 0.2s ease;
+
+}
+
+button:hover {
+    font-weight: 600;
+    background: linear-gradient(45deg, #2c8b57 100%, #3cb371 0%);
+    
+}
+
+button:active {
+    transform: scale(0.95);
+
+}
+
+@media (max-width: 900px) {
+    .transactions {
+        grid-template-columns: 1fr;
+        height: 800px;
+    }
+
+    .alltransactions{
+        height: 370px;
+    }
+
+    .addtransactions{
+        height: 370px;
+    }
+
+    #transaction_list {
+        max-height: 350px;
+    }
+
+    .transaction{
+        height: 3rem;
+    }
+}
+
+/* Smaller size screens */
+@media (max-width:650px) {
+    .expTracDiv {
+        padding: 24px;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .sumary {
+        height: 20rem;
+        padding: auto;
+    }
+    .income_expense {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        
+    }
+
+    h1 {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .inc_exp {
+        width: 85%;
+        height: 80px;
+        
+    }
+
+    .expTracDiv h1 {
+        font-size: 1.5rem;
+    }
+
+    .inc_exp p {
+        font-size: .95rem;
+        margin-bottom: 8px;
+    }
+
+    .transactions {
+        padding:14px 16px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+     .transactions {
+        grid-template-columns: 1fr;
+        height: 640px;
+    }
+
+    .alltransactions{
+        height: 270px;
+    }
+
+    .addtransactions{
+        height: 340px;
+    }
+
+    #transaction_list {
+        max-height: 250px;
+    }
+
+    input {
+    padding: 10px 12px;
+    field-sizing: .75rem;
+    }
+
+    .transaction{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 8px;
+        padding: auto;
+        height: 4rem;
+        position: relative;
+    }
+
+    .transaction span{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .transaction button{
+        position: absolute;
+        right: 3px;
+        top: .4rem;
+    }
+   
+}
+
+/* Mobile size screens */
+@media (max-width:440px) {
+    .expTracDiv {
+        padding: 18px;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .sumary {
+        height: 17rem;
+        padding: auto;
+        margin: 8px 4px;
+    }
+    
+    .inc_exp {
+        width: 85%;
+        height: 60px;
+        
+    }
+
+    .alltransacheader{
+        font-weight: 600;
+    }
+
+    .inc_exp p {
+        font-size: .95rem;
+        margin-top: 8px;
+    }
+
+    
+    h2 {
+        font-size: .9rem;
+    }
+
+     .transactions {
+        grid-template-columns: 1fr;
+        padding:14px 16px;
+        width: auto;
+        height: 640px;
+    }
+
+    .transaction{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 8px;
+        padding: auto;
+        height: 4rem;
+        position: relative;
+    }
+
+    .transaction span{
+        font-size: 0.9rem;
+         text-align: center;
+    }
+
+    .transaction button{
+        position: absolute;
+        right: 3px;
+        top: .4rem;
+    }
+
+    .alltransactions{
+        height: 270px;
+    }
+
+    .addtransactions{
+        height: 340px;
+    }
+
+    #transaction_list {
+        max-height: 250px;
+    }
+
+    input {
+    padding: 10px 12px;
+    field-sizing: .75rem;
+    }
+
+    button {
+        height: 2rem;
+        font-size: .9rem;
+        padding-top: 6px;
+    }
+   
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense_Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="expTracDiv">
+        <h1 class="expensetitle">Expense Tracker</h1>
+        <div class="sumary">
+            <p class="balance">Your Balance</p>
+            <h1 class="accountbalance" id="balance">0.00FCFA</h1>
+            <div class="income_expense">
+                <div class="inc_exp">
+                    <p class="income_statement">Income</p>
+                    <h2 class="income_amount" id="income-amount">0.00FCFA</h2>
+                </div>
+
+                <div class="inc_exp">
+                    <p class="expense_statement">Expense</p>
+                    <h2 class="expense_amount" id="expense-amount">0.00FCFA</h2>
+                </div>
+            </div>
+        </div>
+        <div class="transactions">
+            <div class="alltransactions">
+                <h2 class="alltransacheader">All Transactions</h2>
+                <ul id="transaction_list">
+                    <!-- All transactions shall be displayed here -->
+                </ul>
+            </div>
+            <div class="addtransactions">
+                <h2 class="addtransactionheader">Add Transaction</h2>
+                <form id="transaction-form">
+                 <div class="form-group">
+                    <label for="descrip" >Description</label>
+                    <input type="text" id="descrip" name="descrip" placeholder="Enter Description..." required>
+                 </div> 
+                 <div class="form-group"> 
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" name="amount" placeholder="Enter Amount..." required>
+                 </div>   
+                    <small class="nb"> NB: Use negative (-) infront of all amounts that signifies expenses</small>
+                    <button type="submit">Add Transaction</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
