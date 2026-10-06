@@ -1,6 +1,7 @@
 import React from "react"
 import { Recipe } from "./Recipe.jsx"
 import { ListOfIngredients } from "./ListOfIngredients.jsx"
+import { getRecipeFromChefClaude, getRecipeFromMistral } from "./ai.js"
 
 export default Main() {
     const [ingredients, setIngredients] = React.useState([])
@@ -27,9 +28,16 @@ export default Main() {
 
     const [recipeShown, setRecipeShown] = React.useState(false)
 
-    function showRecipe() {
-        setRecipeShown(true)
+    // function showRecipe() {
+    //     setRecipeShown(true)
+    // }
+
+   async function getRecipe() {
+        const thatRecipe = await getRecipeFromChefClaude(ingredients)
+        setImportRecipe(thatRecipe)
     }
+
+    const [importRecipe, setImportRecipe] = React.useState("")
 
     return(
         <main>
@@ -44,14 +52,20 @@ export default Main() {
             </form>
             {ingredients.length > 0 && <ListOfIngredients 
                 ourSpices={ingredientsList}
-                recipeShow={recipeShown}
+                recipeShow={getRecipe}
                 len={ingredients.length}
-                click={showRecipe}
+                // click={showRecipe}
+                click={getRecipe}
                 /> 
             } 
 
-            {recipeShown === true && <Recipe /> }    
+            // {recipeShown === true && <Recipe /> }  
+            {getRecipe && <Recipe getRecipe={getRecipe} />
+        }  
         </main>
     )
 }
+
+
+
 

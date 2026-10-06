@@ -1,0 +1,1 @@
+The Meme Generator Project is a small project with the goal of helping students understand the concepts of side Effects in React

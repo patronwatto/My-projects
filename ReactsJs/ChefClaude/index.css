@@ -67,3 +67,32 @@ section {
     margin-right: 3px;
 
 }
+
+.get-recipe-container p {
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 20px;
+}
+
+.get-recipe-container button {
+    border: none;
+    border-radius: 6px;
+    background: #D17557;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
+    color: #fafaf8;
+    padding: 9px 17px;
+    font-family: Inter, sans-serif;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.suggested-recipe-container {
+    color: #475467;
+    line-height: 28px;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.suggested-recipe-container ul li, .suggested-recipe-container ol li {
+    margin-bottom: 8px;
+}
